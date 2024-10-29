@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--Formulir-->
+    <div class="container">
+        <h2 style="text-align: center;">Formulir Pendaftaran Siswa</h2>
+        <!--gambar-->
+        <img src="gambar.jpg" alt="Pendidikan">
+        
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required placeholder="Nama">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required  placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="class">Kelas:</label>
+                <select id="class" name="class" required>
+                    <option value="">Pilih Kelas</option>
+                    <option value="10">Kelas 10</option>
+                    <option value="11">Kelas 11</option>
+                    <option value="12">Kelas 12</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="subject">Mata Pelajaran Favorit:</label>
+                <input type="text" id="subject" name="subject">
+            </div>
+            <button type="button" onclick="submitForm()">Daftar</button>
+        </form>
+    
+        <!--tabel-->
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>Kelas</th>
+                    <th>Mata Pelajaran Favorit</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+      
+
+    <script>
+        function submitForm() {
+            // Ambil nilai dari setiap input
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const selectedClass = document.getElementById('class').value;
+            const subject = document.getElementById('subject').value;
+    
+            // Validasi sederhana
+            if (!name || !email || !selectedClass) {
+                alert("Harap isi semua kolom yang diperlukan.");
+                return;
+            }
+    
+            // Tambah data ke tabel
+            const table = document.getElementById("data-table").getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+            newRow.insertCell(0).innerHTML = name;
+            newRow.insertCell(1).innerHTML = email;
+            newRow.insertCell(2).innerHTML = selectedClass;
+            newRow.insertCell(3).innerHTML = subject;
+    
+            // Reset form
+            document.getElementById('registrationForm').reset();
+        }
+    </script>
+</body>
+</html>

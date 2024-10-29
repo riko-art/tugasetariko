@@ -1,0 +1,75 @@
+/* Gaya umum untuk body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Gaya untuk header */
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Gaya untuk container utama */
+.container {
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+  background: rgb(200, 200, 200);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk gambar profil */
+.container img {
+  display: block;
+  margin: 0 auto;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+}
+
+/* Gaya untuk paragraf */
+.container p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* Gaya untuk bagian teks tebal */
+.container p b {
+  color: #2c3e50;
+}
+
+.motivation {
+  background-color: rgb(180, 180, 180); /* Warna latar belakang yang lembut */
+  padding: 20px; /* Jarak di dalam kotak */
+  border-radius: 10px; /* Membuat sudut sedikit melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan halus */
+  font-family: Arial, sans-serif; /* Gaya font */
+  color: #333; /* Warna teks yang kontras */
+  max-width: 800px; /* Batas lebar maksimum kontainer */
+  margin: 20px auto; /* Tengah di layar dengan margin otomatis */
+}
+
+/* Gaya untuk link */
+.container a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.container a:hover {
+  text-decoration: underline;
+}
